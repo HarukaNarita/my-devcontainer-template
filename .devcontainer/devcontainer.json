@@ -1,0 +1,80 @@
+{
+    "name": "hn-domain-adaptation",
+    "image": "mcr.microsoft.com/devcontainers/python:3.13",
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "installZsh": true,
+            "configureZshAsDefaultShell": true,
+            "installOhMyZsh": true
+        }
+    },
+    "containerEnv": {
+        "TZ": "Asia/Tokyo",
+        "PYTHONPATH": "/workspaces",
+    },
+    "runArgs": [
+        "--memory=16g",        
+        "--memory-swap=32g",   
+        "--shm-size=4g",       
+        "--cpus=8",            
+        "--oom-kill-disable"   
+    ],
+    "postCreateCommand": "bash .devcontainer/setup.sh",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "dbaeumer.vscode-eslint",
+                "eamodio.gitlens",
+                "github.copilot",
+                "github.copilot-chat",
+                "github.vscode-pull-request-github",
+                "mechatroner.rainbow-csv",
+                "mhutchie.git-graph",
+                "ms-azuretools.vscode-containers",
+                "ms-azuretools.vscode-docker",
+                "ms-ceintl.vscode-language-pack-ja",
+                "ms-python.autopep8",
+                "ms-python.black-formatter",
+                "ms-python.debugpy",
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-toolsai.jupyter",
+                "ms-toolsai.jupyter-keymap",
+                "ms-toolsai.jupyter-renderers",
+                "ms-toolsai.vscode-jupyter-cell-tags",
+                "ms-toolsai.vscode-jupyter-slideshow",
+                "charliermarsh.ruff"
+            ],
+            "settings": {
+                // "python.defaultInterpreterPath": "/workspaces/.venv/bin/python",
+                "python.defaultInterpreterPath": ".venv/bin/python",
+                "python.terminal.activateEnvironment": true,
+                "jupyter.kernels.filter": [
+                    {
+                        "path": "/workspaces/.venv/bin/python",
+                        "type": "pythonEnvironment"
+                    }
+                ],
+                "python.formatting.provider": "black",
+                "python.linting.enabled": true,
+                "python.linting.ruffEnabled": true,
+                "[python]": {
+                    "editor.formatOnSave": true,
+                    "editor.codeActionsOnSave": {
+                        "source.organizeImports": true
+                    }
+                }
+            }
+        }
+    },
+    "mounts": [
+    ],
+    "forwardPorts": [8888, 8000],
+    "portsAttributes": {
+        "8888": {
+            "label": "Jupyter Lab",
+            "onAutoForward": "notify"
+        }
+    },
+    "remoteUser": "vscode"
+}
