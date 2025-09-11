@@ -1,5 +1,5 @@
 {
-    "name": "hn-domain-adaptation",
+    "name": "my-devcontainer-template",
     "image": "mcr.microsoft.com/devcontainers/python:3.13",
     "features": {
         "ghcr.io/devcontainers/features/common-utils:2": {
