@@ -25,7 +25,7 @@ A comprehensive Python development environment template using Visual Studio Code
 Click the "Use this template" button on GitHub or clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/my-devcontainer-template.git
+git clone https://github.com/HarukaNarita/my-devcontainer-template.git
 cd my-devcontainer-template
 ```
 
