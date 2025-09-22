@@ -1,5 +1,5 @@
 {
-    "name": "my-devcontainer-template",
+    "name": "domain-adaptation",
     "image": "mcr.microsoft.com/devcontainers/python:3.13",
     "features": {
         "ghcr.io/devcontainers/features/common-utils:2": {
@@ -46,7 +46,8 @@
                 "charliermarsh.ruff"
             ],
             "settings": {
-                // "python.defaultInterpreterPath": "/workspaces/.venv/bin/python",
+                "terminal.integrated.hideOnStartup": "always",
+                "terminal.integrated.enablePersistentSessions": false,
                 "python.defaultInterpreterPath": ".venv/bin/python",
                 "python.terminal.activateEnvironment": true,
                 "jupyter.kernels.filter": [
@@ -62,8 +63,16 @@
                     "editor.formatOnSave": true,
                     "editor.codeActionsOnSave": {
                         "source.organizeImports": true
-                    }
-                }
+                    },
+                },
+                "[jupyter]": {
+                    "editor.defaultFormatter": "charliermarsh.ruff"
+                },
+                "notebook.formatOnSave.enabled": true,
+                "notebook.codeActionsOnSave": {
+                    "notebook.source.fixAll": "explicit",
+                    "notebook.source.organizeImports": "explicit",
+                },
             }
         }
     },
