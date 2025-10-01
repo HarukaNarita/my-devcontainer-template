@@ -7,10 +7,6 @@
             "configureZshAsDefaultShell": true,
             "installOhMyZsh": true
         },
-        "ghcr.io/devcontainers/features/docker-in-docker:2": {},
-        "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
-            "packages": "chromium,chromium-driver"
-        }
     },
     "containerEnv": {
         "TZ": "Asia/Tokyo",
