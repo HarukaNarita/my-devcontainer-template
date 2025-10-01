@@ -48,3 +48,4 @@ EOF
 fi
 
 echo "✅ Added auto-activation of uv virtual environment to ~/.bashrc"
+echo "✅ Chromium installed at: $(which chromium)"
