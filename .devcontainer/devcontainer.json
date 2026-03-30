@@ -7,6 +7,9 @@
             "configureZshAsDefaultShell": true,
             "installOhMyZsh": true
         },
+        "ghcr.io/devcontainers/features/common-utils:2": {
+    "upgradePackages": false
+  }
     },
     "containerEnv": {
         "TZ": "Asia/Tokyo",
