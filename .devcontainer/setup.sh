@@ -14,7 +14,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 uv --version
 
 # Create virtual environment in project directory
-uv venv .venv --python 3.13
+uv venv .venv --python 3.13 --clear
 
 # Activate virtual environment
 source .venv/bin/activate
